@@ -1,0 +1,56 @@
+/* ============================================
+   Pro3 Fitness – Extracted Inline Styles
+   ============================================ */
+
+/* Iconify icon stroke width override */
+.icon-stroke {
+  stroke-width: 1.5px;
+}
+
+/* Accessibility — visually hidden but exposed to screen readers and crawlers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Text reveal animation wrapper */
+.reveal-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: 0.25em;
+}
+
+/* Text reveal animation inner word */
+.reveal-word {
+  display: inline-block;
+}
+
+/* SVG dashed stroke path */
+.svg-dashed-path {
+  stroke-dasharray: 6 6;
+}
+
+/* Pricing card scalloped/perforated edge (top) */
+.card-perforation-top {
+  background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x;
+  background-size: 26px 20px;
+}
+
+/* Pricing card scalloped/perforated edge (bottom) */
+.card-perforation-bottom {
+  background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x;
+  background-size: 26px 20px;
+}
+
+/* SVG noise texture overlay */
+.noise-overlay {
+  background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');
+}

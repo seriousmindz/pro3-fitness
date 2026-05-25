@@ -1,7 +1,48 @@
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro3 Fitness - Peak Performance</title>
+<title>Pro3 Fitness — Peak Performance Training, Classes & Recovery</title>
+<meta name="description" content="Pro3 Fitness — elite group classes, 1-on-1 personal training, and recovery zone. 24/7 facility access. Book a class, schedule a session, or start with our online waiver.">
+<meta name="theme-color" content="#FF0000">
+<link rel="icon" type="image/png" href="assets/images/logo-orange.png">
+<link rel="apple-touch-icon" href="assets/images/logo-orange.png">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pro3 Fitness">
+<meta property="og:title" content="Pro3 Fitness — Peak Performance">
+<meta property="og:description" content="Elite group classes, 1-on-1 personal training, and recovery. 24/7 facility access. Book online.">
+<meta property="og:image" content="DSC_0054-3-Enhanced-NR_1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pro3 Fitness — Peak Performance">
+<meta name="twitter:description" content="Elite group classes, 1-on-1 personal training, and recovery. 24/7 facility access.">
+
+<!-- Schema.org HealthClub -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Pro3 Fitness",
+  "description": "Elite group classes, 1-on-1 personal training, and recovery zone with 24/7 facility access.",
+  "image": "DSC_0054-3-Enhanced-NR_1.jpg",
+  "email": "info@pro3fitness.com",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "potentialAction": [
+    {
+      "@type": "ReserveAction",
+      "name": "Book a Group Class",
+      "target": "https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes"
+    },
+    {
+      "@type": "ReserveAction",
+      "name": "Book a Personal Session",
+      "target": "https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services"
+    }
+  ]
+}
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -9,6 +50,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
 body { font-family: 'Inter', sans-serif; }
 .text-outline {
@@ -118,6 +160,7 @@ addUtilities({
         .gradient-blur::before {
           content: "";
           z-index: 1;
+          -webkit-backdrop-filter: blur(0.5px);
           backdrop-filter: blur(0.5px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 0%,
@@ -128,6 +171,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(1) {
           z-index: 2;
+          -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 12.5%,
@@ -138,6 +182,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(2) {
           z-index: 3;
+          -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 25%,
@@ -148,6 +193,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(3) {
           z-index: 4;
+          -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 37.5%,
@@ -158,6 +204,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(4) {
           z-index: 5;
+          -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 50%,
@@ -168,6 +215,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(5) {
           z-index: 6;
+          -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 62.5%,
@@ -178,6 +226,7 @@ addUtilities({
 
         .gradient-blur>div:nth-of-type(6) {
           z-index: 7;
+          -webkit-backdrop-filter: blur(32px);
           backdrop-filter: blur(32px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 75%,
@@ -188,6 +237,7 @@ addUtilities({
         .gradient-blur::after {
           content: "";
           z-index: 8;
+          -webkit-backdrop-filter: blur(64px);
           backdrop-filter: blur(64px);
           mask: linear-gradient(to top,
               rgba(0, 0, 0, 0) 87.5%,
@@ -208,7 +258,7 @@ addUtilities({
           <div class="flex items-center gap-4">
             <div class="hidden md:flex items-center bg-white rounded-full pl-8 pr-10 py-3.5 shadow-2xl">
               <div class="flex items-center gap-8">
-                <a href="#" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
+                <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
                   <span class="text-neutral-400 group-hover:text-orange-600 transition-colors">•</span>
                   Classes
                 </a>
@@ -216,26 +266,26 @@ addUtilities({
                   <span class="text-neutral-400 group-hover:text-orange-600 transition-colors">•</span>
                   Programs
                 </a>
-                <a href="#" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
+                <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
                   <span class="text-neutral-400 group-hover:text-orange-600 transition-colors">•</span>
-                  Recovery
+                  Book Session
                 </a>
-                <a href="#" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
+                <a href="#join" class="text-xs font-semibold text-neutral-900 uppercase tracking-widest hover:text-orange-600 transition-colors flex items-center gap-2 group" >
                   <span class="text-neutral-400 group-hover:text-orange-600 transition-colors">•</span>
-                  Nutrition
+                  Membership
                 </a>
               </div>
             </div>
 
-            <a href="#" class="hover:bg-orange-600 transition-all flex items-center gap-3 hover:shadow-orange-500/20 hover:-translate-y-0.5 group text-white bg-blue-500 rounded-full px-8 py-3.5 shadow-xl" >
+            <a href="#start" class="hover:bg-orange-600 transition-all flex items-center gap-3 hover:shadow-orange-500/20 hover:-translate-y-0.5 group text-white bg-blue-500 rounded-full px-8 py-3.5 shadow-xl" >
               <span class="text-xs font-semibold uppercase tracking-widest">
                 Join Pro3
               </span>
-              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
             </a>
 
-            <button class="md:hidden w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors" >
-              <iconify-icon icon="solar:hamburger-menu-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
+            <button id="mobileMenuOpen" aria-label="Open menu" class="md:hidden w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors" >
+              <iconify-icon icon="solar:hamburger-menu-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
             </button>
           </div>
         </div>
@@ -243,7 +293,7 @@ addUtilities({
 
       <!-- Hero Section -->
       <header class="md:h-[850px] overflow-hidden group w-full h-[90vh] relative">
-        <img src="https://cdn.midjourney.com/9542fac3-8634-4e2d-aa8f-851160415266/0_3.png?w=800&q=80" alt="Pro3 Facility" class="absolute inset-0 w-full h-full object-cover brightness-[0.85] group-hover:scale-105 transition-transform duration-1000 ease-in-out">
+        <img src="DSC_0054-3-Enhanced-NR_1.jpg" alt="Pro3 Facility" class="absolute inset-0 w-full h-full object-cover brightness-[0.85] group-hover:scale-105 transition-transform duration-1000 ease-in-out">
 
         <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-neutral-950/20"></div>
 
@@ -253,12 +303,87 @@ addUtilities({
               Pro3 Facility Now Open
             </span>
           </div>
-          <h1 class="text-[20vw] leading-[0.8] font-medium text-white tracking-tighter opacity-90 mix-blend-overlay"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">PERFORM</span></span></h1>
+          <h1 class="text-[20vw] leading-[0.8] font-medium text-white tracking-tighter opacity-90 mix-blend-overlay">
+            <span class="sr-only">Pro3 Fitness — Peak Performance Training, Group Classes & Personal Sessions</span>
+            <span aria-hidden="true" class="reveal-wrapper"><span class="reveal-word">PERFORM</span></span>
+          </h1>
           <p class="text-white/80 text-lg md:text-xl font-light max-w-xl mt-6 px-4 leading-relaxed" >
             Elevate your fitness. State-of-the-art equipment and elite coaching to reach your peak performance.
           </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 items-center justify-center px-4">
+            <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-blue-500 hover:bg-orange-600 transition-all text-white rounded-full px-8 py-3.5 shadow-xl text-xs font-semibold uppercase tracking-widest">
+              Book a Class
+              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
+            </a>
+            <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black backdrop-blur border border-white/20 transition-all text-white rounded-full px-8 py-3.5 text-xs font-semibold uppercase tracking-widest">
+              Book a Session
+              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
+            </a>
+          </div>
         </div>
       </header>
+
+      <!-- Start Here: Waiver → Book → Train -->
+      <section id="start" aria-labelledby="start-heading" class="bg-neutral-950 border-b border-white/10 py-20 px-6 md:px-12">
+        <div class="max-w-[1600px] mx-auto">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-white/10 pb-8">
+            <div class="flex flex-col items-start gap-2">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-8 h-[2px] bg-blue-600"></span>
+                <span class="text-blue-500 font-mono text-lg font-semibold tracking-widest uppercase">00</span>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">First Visit</span>
+              </div>
+              <h2 id="start-heading" class="text-5xl md:text-7xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]">
+                START HERE
+              </h2>
+            </div>
+            <p class="text-neutral-400 max-w-md md:text-right text-sm leading-relaxed">
+              Three steps to your first session. Sign the waiver once, then book the format that fits.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="https://app.waiverelectronic.com/render/templateByRefId/66d8e13ab4d10100ec805d4d" target="_blank" rel="noopener" class="group block border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all p-8 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-8">
+                <span class="text-blue-500 font-mono text-sm font-semibold tracking-widest">01</span>
+                <iconify-icon icon="solar:arrow-right-up-linear" width="1.5em" height="1.5em" class="icon-stroke text-white/30 group-hover:text-blue-500 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"></iconify-icon>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-oswald font-semibold uppercase tracking-tight text-white mb-3">Sign the Waiver</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">Required for every new member before your first class or session. Takes about a minute on your phone.</p>
+              <span class="inline-flex items-center gap-2 mt-6 text-xs font-semibold uppercase tracking-widest text-blue-500 group-hover:text-white transition-colors">
+                Complete Waiver
+                <iconify-icon icon="solar:arrow-right-linear" width="1em" height="1em" class="icon-stroke"></iconify-icon>
+              </span>
+            </a>
+
+            <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="group block border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all p-8 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-8">
+                <span class="text-blue-500 font-mono text-sm font-semibold tracking-widest">02</span>
+                <iconify-icon icon="solar:arrow-right-up-linear" width="1.5em" height="1.5em" class="icon-stroke text-white/30 group-hover:text-blue-500 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"></iconify-icon>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-oswald font-semibold uppercase tracking-tight text-white mb-3">Book a Group Class</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">HIIT, mobility, strength clinics, and more. Reserve a spot in any upcoming class on the Square schedule.</p>
+              <span class="inline-flex items-center gap-2 mt-6 text-xs font-semibold uppercase tracking-widest text-blue-500 group-hover:text-white transition-colors">
+                View Class Schedule
+                <iconify-icon icon="solar:arrow-right-linear" width="1em" height="1em" class="icon-stroke"></iconify-icon>
+              </span>
+            </a>
+
+            <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="group block border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all p-8 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-8">
+                <span class="text-blue-500 font-mono text-sm font-semibold tracking-widest">03</span>
+                <iconify-icon icon="solar:arrow-right-up-linear" width="1.5em" height="1.5em" class="icon-stroke text-white/30 group-hover:text-blue-500 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"></iconify-icon>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-oswald font-semibold uppercase tracking-tight text-white mb-3">Book a 1-on-1 Session</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">Personal training, assessments, and recovery sessions with a Pro3 coach. Pick your time on the Square calendar.</p>
+              <span class="inline-flex items-center gap-2 mt-6 text-xs font-semibold uppercase tracking-widest text-blue-500 group-hover:text-white transition-colors">
+                Schedule Session
+                <iconify-icon icon="solar:arrow-right-linear" width="1em" height="1em" class="icon-stroke"></iconify-icon>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- Story / Intro Section -->
       <section class="border-y grid grid-cols-1 md:grid-cols-4 border-white/10">
@@ -280,7 +405,7 @@ addUtilities({
           </span>
         </div>
         <div class="p-12 border-r border-white/10 col-span-1 md:col-span-2 relative overflow-hidden flex items-end group" >
-          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/99089245-a2a7-4c8d-8c8b-4f6f66c39b93_1600w.webp" class="contrast-125 transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 brightness-50" alt="Atmospheric">
+          <img src="DSC_0079-3-Enhanced-NR_1.jpg" class="contrast-125 transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 brightness-50" alt="Pro3 Facility Interior">
           <div class="bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
           <div class="relative z-10 p-2">
             <div class="text-3xl font-semibold tracking-tighter uppercase text-white">
@@ -307,7 +432,7 @@ addUtilities({
         </span>
   </div>
 
-  <h2 class="md:text-8xl uppercase leading-[0.9] text-6xl font-semibold text-white tracking-tighter font-oswald"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">PRO3 HIIT SERIES</span></span></h2>
+  <h2 class="md:text-8xl uppercase leading-[0.9] text-6xl font-semibold text-white tracking-tighter font-oswald"><span class="reveal-wrapper"><span class="reveal-word">PRO3 HIIT SERIES</span></span></h2>
 </div>
 
     <div class="flex flex-col items-start md:items-end gap-6">
@@ -315,32 +440,32 @@ addUtilities({
         High-intensity, science-backed group training designed to burn fat and build lean muscle.
       </p>
 
-      <button class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
-        VIEW PROGRAM DETAILS
-        <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-      </button>
+      <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
+        VIEW CLASS SCHEDULE
+        <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
+      </a>
     </div>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
     <div class="lg:col-span-5 lg:h-auto overflow-hidden group h-[500px] border-white/10 border rounded-none relative" >
-  <img src="https://cdn.midjourney.com/f2614459-13da-42fd-89d4-011b62220a5d/0_1.png?w=800&q=80" class="transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover" alt="Pro3 Group Training" >
+  <img src="DSC_0101-2-Enhanced-NR-2_1.jpg" class="transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover" alt="Pro3 Group Training" >
   <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
   <div class="absolute bottom-0 left-0 right-0 p-8">
     <h3 class="text-white text-2xl font-medium">Functional Training</h3>
-    <p class="text-white/60 text-sm mt-1" >
-      Strength • Cardio • Mobility • Core</p>
+    <h4 class="text-white/60 text-sm mt-1 font-normal" >
+      Strength • Cardio • Mobility • Core</h4>
   </div>
 </div>
 
     <div class="lg:col-span-7 flex flex-col gap-8" >
       <div class="overflow-hidden h-[350px] border-white/10 border rounded-none relative">
-        <img src="https://cdn.midjourney.com/21b652fa-cfd7-4cc9-a5a5-ac8725af453d/0_3.png?w=800&q=80" class="w-full h-full object-cover" alt="Runner at night" >
+        <img src="DSC_0122-Enhanced-NR-2_1.jpg" class="w-full h-full object-cover" alt="Pro3 Training Session" >
         <div class="bg-gradient-to-r from-black/40 via-transparent to-black/40 absolute top-0 right-0 bottom-0 left-0"></div>
 
         <div class="absolute top-6 right-6 bg-white rounded-full p-3 shadow-xl flex items-center justify-center">
-          <iconify-icon icon="solar:music-notes-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;" class="text-blue-600"></iconify-icon>
+          <iconify-icon icon="solar:music-notes-linear" width="1.5em" height="1.5em" class="icon-stroke text-blue-600"></iconify-icon>
         </div>
       </div>
 
@@ -367,10 +492,10 @@ addUtilities({
           </span>
         </div>
 
-        <button class="flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest text-white" >
+        <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest text-white" >
           BOOK A CLASS
-          <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="ml-2"></iconify-icon>
-        </button>
+          <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke ml-2"></iconify-icon>
+        </a>
       </div>
     </div>
   </div>
@@ -404,16 +529,16 @@ addUtilities({
                   SCHEDULE
                 </span>
         </div>
-        <h2 class="text-6xl md:text-8xl uppercase font-semibold text-white tracking-tighter font-oswald leading-[0.95] px-2 md:px-4"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">UPCOMING CLINICS</span></span></h2>
+        <h2 class="text-6xl md:text-8xl uppercase font-semibold text-white tracking-tighter font-oswald leading-[0.95] px-2 md:px-4"><span class="reveal-wrapper"><span class="reveal-word">UPCOMING CLINICS</span></span></h2>
       </div>
       <div class="flex flex-col items-start md:items-end gap-6">
         <p class="text-neutral-400 max-w-md md:text-right text-sm leading-relaxed" >
           The 2026 season is open. Secure your entry for the ultimate test.
         </p>
-        <button class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
+        <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
                 FULL SCHEDULE
-                <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-              </button>
+                <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
+              </a>
       </div>
     </div>
 
@@ -430,18 +555,17 @@ addUtilities({
         </h3>
         <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500">
           <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
-                  Main Floor
+                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                 </span>
           <span class="text-white/20">|</span>
           <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
+                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                   LVL: All Levels
                 </span>
         </div>
       </div>
       <div class="md:col-span-4 overflow-hidden h-[280px] border-white/5 border rounded-none relative shadow-2xl" >
-        <img src="https://cdn.midjourney.com/dd2b9765-6c5b-4922-8c9e-2f2546c87003/0_2.png?w=800&q=80" alt="Event image" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
+        <img src="DSC_0008-2-Enhanced-NR-2.jpg" alt="Strength Mastery Clinic" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
         <div class="group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 absolute top-0 right-0 bottom-0 left-0">
         </div>
       </div>
@@ -460,18 +584,18 @@ addUtilities({
   </h3>
   <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500">
     <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
+                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                   Studio A
                 </span>
     <span class="text-white/20">|</span>
     <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
+                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                   LVL: Beginner
                 </span>
   </div>
 </div>
       <div class="md:col-span-4 overflow-hidden h-[280px] border-white/5 border rounded-none relative shadow-2xl" >
-        <img src="https://cdn.midjourney.com/148df933-1941-4e2d-b4c0-102bb224f50e/0_3.png?w=800&q=80" alt="Event image" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
+        <img src="DSC_0094-2-Enhanced-NR-2_1.jpg" alt="Mobility Flow Clinic" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
         <div class="group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 absolute top-0 right-0 bottom-0 left-0">
         </div>
       </div>
@@ -490,18 +614,18 @@ addUtilities({
         </h3>
         <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500">
           <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
+                  <iconify-icon icon="solar:map-point-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                   Turf Zone
                 </span>
           <span class="text-white/20">|</span>
           <span class="flex items-center gap-1.5">
-                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;"></iconify-icon>
+                  <iconify-icon icon="solar:chart-square-linear" width="1.2em" height="1.2em" class="icon-stroke"></iconify-icon>
                   LVL: Advanced
                 </span>
         </div>
       </div>
       <div class="md:col-span-4 overflow-hidden h-[280px] border-white/5 border rounded-none relative shadow-2xl" >
-        <img src="https://cdn.midjourney.com/284eb122-4a56-42a9-ba46-c7624edca6a7/0_0.png?w=800&q=80" alt="Event image" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
+        <img src="DSC_0105-2-Enhanced-NR-2_1.jpg" alt="Hyrox Prep Clinic" class="group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 opacity-60 w-full h-full object-cover grayscale" >
         <div class="group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 absolute top-0 right-0 bottom-0 left-0">
         </div>
       </div>
@@ -524,7 +648,7 @@ addUtilities({
         </div>
       </div>
       
-      <section class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto">
+      <section id="programs" class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-white/10 pb-8">
           <div class="flex flex-col items-start gap-2">
             <div class="flex items-center gap-3 mb-2">
@@ -534,7 +658,7 @@ addUtilities({
                 TRAINING
               </span>
             </div>
-            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">CORE PROGRAMS</span></span></h2>
+            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span class="reveal-wrapper"><span class="reveal-word">CORE PROGRAMS</span></span></h2>
           </div>
           <div class="flex gap-8 md:gap-12 pb-2 gap-x-8 gap-y-8 items-center">
             <div class="flex flex-col">
@@ -579,7 +703,7 @@ addUtilities({
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="group overflow-hidden hover:-translate-y-1 transition-transform duration-300 bg-red-700 h-[450px] z-10 rounded-none relative" >
-            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply grayscale contrast-125" alt="Sprint Background">
+            <img src="DSC_0149-2-Enhanced-NR-2_1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply grayscale contrast-125" alt="HIIT Training Zone">
             <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 to-red-600/40 mix-blend-multiply"></div>
 
             <div class="flex flex-col z-10 pt-8 pr-8 pb-10 pl-8 absolute top-0 right-0 bottom-0 left-0 justify-end">
@@ -591,45 +715,45 @@ addUtilities({
               </p>
             </div>
 
-            <button class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-lg z-20" >
-              <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
-            </button>
+            <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" aria-label="Book a HIIT class" class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-lg z-20" >
+              <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
+            </a>
           </div>
 
           <div class="group overflow-hidden hover:-translate-y-1 transition-transform duration-300 bg-neutral-900 h-[450px] border-neutral-800 border rounded-none relative" >
-            <img src="https://cdn.midjourney.com/b26f1d05-33fe-486f-9a7b-6d2d28cefe53/0_1.png?w=800&q=80" class="transition-transform duration-700 group-hover:scale-110 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" alt="Personal Training">
+            <img src="DSC_0146-Enhanced-NR_1 (1).jpg" class="transition-transform duration-700 group-hover:scale-110 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" alt="Personal Training">
             <div class="bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 absolute top-0 right-0 bottom-0 left-0"></div>
 
             <div class="absolute bottom-0 left-0 right-0 p-8 pb-10">
-              <span class="block text-xs font-semibold text-white/70 uppercase tracking-[0.25em] mb-2 font-oswald">
+              <h4 class="block text-xs font-semibold text-white/70 uppercase tracking-[0.25em] mb-2 font-oswald">
                 1-ON-1
-              </span>
+              </h4>
               <h3 class="uppercase leading-none text-5xl font-semibold italic text-white tracking-tight font-oswald">
                 Personal Training
               </h3>
             </div>
 
-            <button class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-black transition-all border border-white/10 group-hover:border-white" >
-               <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
-            </button>
+            <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" aria-label="Book a personal training session" class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-black transition-all border border-white/10 group-hover:border-white" >
+               <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
+            </a>
           </div>
 
           <div class="group overflow-hidden hover:-translate-y-1 transition-transform duration-300 bg-neutral-900 h-[450px] border-neutral-800 border rounded-none relative" >
-            <img src="https://cdn.midjourney.com/795ba0d4-4a31-484c-841b-5ebbc7a05e72/0_3.png?w=800&q=80" class="transition-transform duration-700 group-hover:scale-110 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" alt="Recovery Center">
+            <img src="DSC_0152-Enhanced-NR_1.jpg" class="transition-transform duration-700 group-hover:scale-110 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" alt="Recovery Center">
             <div class="bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 absolute top-0 right-0 bottom-0 left-0"></div>
 
             <div class="absolute bottom-0 left-0 right-0 p-8 pb-10">
-              <span class="block text-xs font-semibold text-white/70 uppercase tracking-[0.25em] mb-2 font-oswald">
+              <h4 class="block text-xs font-semibold text-white/70 uppercase tracking-[0.25em] mb-2 font-oswald">
                 REJUVENATE
-              </span>
+              </h4>
               <h3 class="text-5xl font-oswald font-semibold text-white uppercase italic tracking-tight leading-none">
                 Recovery Center
               </h3>
             </div>
 
-            <button class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-black transition-all border border-white/10 group-hover:border-white" >
-               <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
-            </button>
+            <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" aria-label="Book a recovery session" class="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-black transition-all border border-white/10 group-hover:border-white" >
+               <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
+            </a>
           </div>
         </div>
       </section><div class="overflow-hidden border-y bg-blue-600 border-black pt-3 pb-3">
@@ -648,7 +772,7 @@ addUtilities({
         </div>
       </div>
       
-      <section class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto border-b border-white/10">
+      <section id="facility" class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto border-b border-white/10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-white/10 pb-8">
           <div class="flex flex-col items-start gap-2">
             <div class="flex items-center gap-3 mb-2">
@@ -658,7 +782,7 @@ addUtilities({
                 FACILITY
               </span>
             </div>
-            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">FACILITY ZONES</span></span></h2>
+            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span class="reveal-wrapper"><span class="reveal-word">FACILITY ZONES</span></span></h2>
           </div>
           <div class="flex flex-col items-start md:items-end gap-6">
             <p class="text-neutral-400 max-w-md md:text-right text-sm leading-relaxed" >
@@ -666,13 +790,13 @@ addUtilities({
             </p>
             <button class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
               ALL LOCATIONS
-              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
             </button>
           </div>
         </div>
 
         <div class="aspect-[16/9] md:aspect-[21/9] overflow-hidden group bg-neutral-900 w-full border-white/10 border rounded-none relative shadow-2xl">
-          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6842d21d-42e4-4021-a18d-a739a9909ede_3840w.png" class="contrast-125 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-1000 ease-in-out group-hover:scale-100 opacity-50 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale scale-105" alt="Course Map">
+          <img src="DSC_0079-3-Enhanced-NR_1.jpg" class="contrast-125 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-1000 ease-in-out group-hover:scale-100 opacity-50 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale scale-105" alt="Facility Layout">
 
           <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent pointer-events-none"></div>
 
@@ -686,7 +810,7 @@ addUtilities({
               </div>
             </div>
 
-            <svg class="absolute inset-0 w-full h-full text-blue-500/60 stroke-current stroke-2 fill-none stroke-dashed opacity-60 group-hover:opacity-100 transition-opacity duration-700" style="stroke-dasharray: 6 6;">
+            <svg class="absolute inset-0 w-full h-full text-blue-500/60 stroke-current stroke-2 fill-none stroke-dashed opacity-60 group-hover:opacity-100 transition-opacity duration-700 svg-dashed-path">
               <path d="M 20% 40% Q 35% 35% 50% 55% T 80% 45%" vector-effect="non-scaling-stroke"></path>
             </svg>
 
@@ -706,17 +830,17 @@ addUtilities({
           </div>
 
           <div class="absolute bottom-6 right-6 flex flex-col gap-2 pointer-events-auto">
-            <button class="w-10 h-10 bg-neutral-900/90 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-all shadow-lg group/btn" >
-              <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
+            <button aria-label="Zoom in" class="w-10 h-10 bg-neutral-900/90 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-all shadow-lg group/btn" >
+              <iconify-icon icon="solar:add-circle-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
             </button>
-            <button class="w-10 h-10 bg-neutral-900/90 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-all shadow-lg group/btn" >
-              <iconify-icon icon="solar:minus-circle-linear" width="1.5em" height="1.5em" style="stroke-width: 1.5px;"></iconify-icon>
+            <button aria-label="Zoom out" class="w-10 h-10 bg-neutral-900/90 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-all shadow-lg group/btn" >
+              <iconify-icon icon="solar:minus-circle-linear" width="1.5em" height="1.5em" class="icon-stroke"></iconify-icon>
             </button>
           </div>
         </div>
 
         <div class="mt-6 flex items-start gap-3 text-sm text-neutral-500 font-medium">
-          <iconify-icon icon="solar:info-circle-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="mt-0.5 shrink-0 text-blue-500/50"></iconify-icon>
+          <iconify-icon icon="solar:info-circle-linear" width="1.2em" height="1.2em" class="icon-stroke mt-0.5 shrink-0 text-blue-500/50"></iconify-icon>
           <p class="italic opacity-80" >
             Facility layout and equipment locations are optimized regularly for member experience.
           </p>
@@ -741,7 +865,7 @@ addUtilities({
       </div>
       
 
-      <section class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto">
+      <section id="community" class="py-24 px-6 md:px-12 max-w-[1600px] mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-white/10 pb-8">
           <div class="flex flex-col items-start gap-2">
             <div class="flex items-center gap-3 mb-2">
@@ -751,7 +875,7 @@ addUtilities({
                 COMMUNITY
               </span>
             </div>
-            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">MEMBER RESULTS</span></span></h2>
+            <h2 class="text-6xl md:text-8xl font-oswald font-semibold uppercase tracking-tighter text-white leading-[0.9]"><span class="reveal-wrapper"><span class="reveal-word">MEMBER RESULTS</span></span></h2>
           </div>
           <div class="flex flex-col items-start md:items-end gap-6">
             <p class="text-neutral-400 max-w-md md:text-right text-sm leading-relaxed" >
@@ -759,7 +883,7 @@ addUtilities({
             </p>
             <button class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
               COMMUNITY HUB
-              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
             </button>
           </div>
         </div>
@@ -768,7 +892,7 @@ addUtilities({
           <div class="space-y-12" >
             <div class="flex gap-6 items-start group">
               <div class="mt-1">
-                <iconify-icon icon="solar:chat-square-quote-linear" width="2em" height="2em" style="stroke-width: 1.5px;" class="text-neutral-300 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                <iconify-icon icon="solar:chat-square-quote-linear" width="2em" height="2em" class="icon-stroke text-neutral-300 group-hover:text-orange-500 transition-colors"></iconify-icon>
               </div>
               <div class="">
                 <p class="text-neutral-500 text-lg leading-relaxed mb-4" >
@@ -794,7 +918,7 @@ addUtilities({
 
             <div class="flex gap-6 items-start group">
               <div class="mt-1">
-                 <iconify-icon icon="solar:chat-square-quote-linear" width="2em" height="2em" style="stroke-width: 1.5px;" class="text-neutral-300 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                 <iconify-icon icon="solar:chat-square-quote-linear" width="2em" height="2em" class="icon-stroke text-neutral-300 group-hover:text-orange-500 transition-colors"></iconify-icon>
               </div>
               <div class="">
                 <p class="text-neutral-500 text-lg leading-relaxed mb-4" >
@@ -820,7 +944,7 @@ addUtilities({
 
           <div class="flex flex-col gap-6" >
             <div class="overflow-hidden group w-full h-64 rounded-none relative">
-              <img src="https://cdn.midjourney.com/4e51269a-fda0-4304-af47-dde9c1253077/0_2.png?w=800&q=80" class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover" alt="Pro3 Gym 1" >
+              <img src="DSC_0008-2-Enhanced-NR-2.jpg" class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover" alt="Pro3 Gym Training" >
               <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg">
                 <span class="text-sm font-semibold text-neutral-900">
                   Elite Results
@@ -828,7 +952,7 @@ addUtilities({
               </div>
             </div>
             <div class="overflow-hidden group w-full h-64 rounded-none relative">
-              <img src="https://cdn.midjourney.com/9e287538-f791-40cb-9ff6-d2999a34f141/0_3.png?w=800&q=80" class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover" alt="Pro3 Gym 2" >
+              <img src="DSC_0101-2-Enhanced-NR-2_1.jpg" class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover" alt="Pro3 Community" >
               <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg">
                 <span class="text-sm font-semibold text-neutral-900">
                   Unmatched Community
@@ -854,7 +978,7 @@ addUtilities({
             </span>
           </div>
         </div>
-      </div><section class="md:px-12 text-white bg-neutral-950 pt-24 pr-6 pb-24 pl-6">
+      </div><section id="join" class="md:px-12 text-white bg-neutral-950 pt-24 pr-6 pb-24 pl-6">
   <div class="max-w-[1600px] mx-auto">
     <div class="flex flex-col md:flex-row md:items-end gap-6 border-white/10 border-b mb-16 pb-8 gap-x-6 gap-y-6 justify-between">
               <div class="flex flex-col items-start gap-2">
@@ -865,7 +989,7 @@ addUtilities({
                     MEMBERSHIPS
                   </span>
                 </div>
-                <h2 class="md:text-8xl uppercase leading-[0.9] text-6xl font-semibold text-white tracking-tighter font-oswald"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em"><span class="reveal-word" style="display: inline-block;">JOIN PRO3</span></span></h2>
+                <h2 class="md:text-8xl uppercase leading-[0.9] text-6xl font-semibold text-white tracking-tighter font-oswald"><span class="reveal-wrapper"><span class="reveal-word">JOIN PRO3</span></span></h2>
               </div>
               <div class="flex flex-col items-start md:items-end gap-6">
                 <p class="text-neutral-400 max-w-md md:text-right text-sm leading-relaxed" >
@@ -873,15 +997,15 @@ addUtilities({
                 </p>
                 <button class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold uppercase tracking-widest" >
                   MEMBERSHIP OPTIONS
-                  <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" style="stroke-width: 1.5px;" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                  <iconify-icon icon="solar:arrow-right-linear" width="1.2em" height="1.2em" class="icon-stroke group-hover:translate-x-1 transition-transform"></iconify-icon>
                 </button>
               </div>
             </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch"> <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8" >
     <div class="relative bg-black border border-white/20" >
-      <div class="absolute left-0 right-0 -top-[10px] h-5" style="background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x; background-size: 26px 20px;"></div>
-      <div class="absolute left-0 right-0 -bottom-[10px] h-5" style="background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x; background-size: 26px 20px;"></div>
+      <div class="absolute left-0 right-0 -top-[10px] h-5 card-perforation-top"></div>
+      <div class="absolute left-0 right-0 -bottom-[10px] h-5 card-perforation-bottom"></div>
       <div class="relative p-8 pt-14 min-h-[560px] flex flex-col text-center">
         <h3 class="uppercase leading-none text-6xl font-semibold italic text-white tracking-tight font-oswald">ESSENTIAL</h3>
         <p class="mt-4 text-xs text-white/55 leading-relaxed max-w-[240px] mx-auto" >Essential membership includes:</p>
@@ -899,8 +1023,8 @@ addUtilities({
     </div>
 
     <div class="relative bg-black border border-white/20" >
-      <div class="absolute left-0 right-0 -top-[10px] h-5" style="background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x; background-size: 26px 20px;"></div>
-      <div class="absolute left-0 right-0 -bottom-[10px] h-5" style="background: radial-gradient(circle, transparent 10px, rgba(0,0,0,1) 10px) repeat-x; background-size: 26px 20px;"></div>
+      <div class="absolute left-0 right-0 -top-[10px] h-5 card-perforation-top"></div>
+      <div class="absolute left-0 right-0 -bottom-[10px] h-5 card-perforation-bottom"></div>
       <div class="relative p-8 pt-14 min-h-[560px] flex flex-col text-center">
         <h3 class="uppercase leading-none text-6xl font-semibold italic text-white tracking-tight font-oswald">PREMIUM</h3>
         <p class="mt-4 text-xs text-white/55 leading-relaxed max-w-[240px] mx-auto" >Premium membership includes:</p>
@@ -919,23 +1043,25 @@ addUtilities({
   </div>
 
   <div class="lg:col-span-5 h-full" > <div class="border border-white/15 h-full flex flex-col"> <div class="relative aspect-[2.2/1] overflow-hidden shrink-0">
-        <img src="https://cdn.midjourney.com/0e245ffa-8c07-4437-8d7a-abbd1a012617/0_0.png?w=800&q=80" class="opacity-70 w-full h-full object-cover grayscale" alt="" >
+        <img src="DSC_0054-3-Enhanced-NR_1.jpg" class="opacity-70 w-full h-full object-cover grayscale" alt="Pro3 Membership" >
         <div class="absolute inset-0 bg-black/35"></div>
-        <div class="opacity-30 absolute top-0 right-0 bottom-0 left-0" style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')">
+        <div class="opacity-30 absolute top-0 right-0 bottom-0 left-0 noise-overlay">
         </div>
       </div>
 
-      <div class="flex flex-col flex-1 pt-8 pr-8 pb-8 pl-8"> <h2 class="text-4xl font-bold tracking-tight uppercase leading-[0.9]"><span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em" class=""><span class="reveal-word" style="display: inline-block;">START YOUR JOURNEY</span></span></h2>
+      <div class="flex flex-col flex-1 pt-8 pr-8 pb-8 pl-8"> <h2 class="text-4xl font-bold tracking-tight uppercase leading-[0.9]"><span class="reveal-wrapper"><span class="reveal-word">START YOUR JOURNEY</span></span></h2>
         
         <p class="mt-4 text-xs text-white/50" >Select your plan and transform your fitness.</p>
 
         <div class="flex-1"></div>
 
-        <button class="uppercase hover:invert transition-all text-sm font-bold text-black tracking-widest bg-white w-full mt-8 pt-5 pb-5" >Join Now</button>
+        <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="block text-center uppercase hover:invert transition-all text-sm font-bold text-black tracking-widest bg-white w-full mt-8 pt-5 pb-5">Join Now</a>
 
-        <p class="mt-6 text-[10px] text-white/30 text-center leading-relaxed" >
-          Prices include all taxes. 
-          <br>By clicking "Join Now" you agree to our terms of service.
+        <p class="mt-6 text-[10px] text-white/40 text-center leading-relaxed" >
+          Prices include all taxes. By joining you agree to our terms of service.
+          <br>New members must complete the
+          <a href="https://app.waiverelectronic.com/render/templateByRefId/66d8e13ab4d10100ec805d4d" target="_blank" rel="noopener" class="underline hover:text-white">online waiver</a>
+          before their first session.
         </p>
       </div>
     </div>
@@ -961,17 +1087,17 @@ addUtilities({
         <div class="max-w-7xl mx-auto">
           <div class="flex flex-col md:flex-row gap-16 mb-20 gap-x-16 gap-y-16 items-start justify-between">
   <div class="space-y-3">
-    <a href="#races" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
+    <a href="members.html" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
       PROGRAMS
-      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" style="stroke-width: 1.5px;" class="text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" class="icon-stroke text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
     </a>
-    <a href="#protocol" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
+    <a href="#facility" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
       FACILITY
-      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" style="stroke-width: 1.5px;" class="text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" class="icon-stroke text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
     </a>
-    <a href="#legion" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
+    <a href="#community" class="group flex items-center gap-4 text-6xl md:text-7xl font-semibold tracking-tighter transition-colors hover:text-blue-500" >
       COMMUNITY
-      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" style="stroke-width: 1.5px;" class="text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+      <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" class="icon-stroke text-4xl md:text-5xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
     </a>
   </div>
 
@@ -980,32 +1106,37 @@ addUtilities({
       Command Center
     </div>
     <div class="mt-6 flex flex-col gap-3">
-      <a href="#" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
+      <a href="https://app.waiverelectronic.com/render/templateByRefId/66d8e13ab4d10100ec805d4d" target="_blank" rel="noopener" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
         <div class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
-          <span class="text-sm font-semibold uppercase tracking-[0.22em]">
-                      Instagram
-                    </span>
+          <span class="text-sm font-semibold uppercase tracking-[0.22em]">Waiver</span>
         </div>
-        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">
-                    @pro3.fitness
-                  </span>
+        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">Sign Online</span>
       </a>
-      <a href="#" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
+      <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
         <div class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
-          <span class="text-sm font-semibold uppercase tracking-[0.22em]">
-                      Location
-                    </span>
+          <span class="text-sm font-semibold uppercase tracking-[0.22em]">Group Classes</span>
         </div>
-        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">
-                    Find a Club
-                  </span>
+        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">Book a Class</span>
+      </a>
+      <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
+          <span class="text-sm font-semibold uppercase tracking-[0.22em]">1-on-1 Sessions</span>
+        </div>
+        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">Book a Session</span>
+      </a>
+      <a href="members.html" class="inline-flex items-center justify-between gap-8 border border-white/15 px-5 py-3.5 hover:border-blue-500/50 transition-colors group rounded-xl" >
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
+          <span class="text-sm font-semibold uppercase tracking-[0.22em]">Member Programs</span>
+        </div>
+        <span class="text-sm text-white/40 group-hover:text-blue-400 transition-colors">Download PDFs</span>
       </a>
     </div>
     <div class="mt-6 text-sm text-white/50 leading-relaxed max-w-xs font-light">
-      Real-time class tracking, personalized insights, and community
-      updates. Forge your discipline.
+      Sign the waiver once, then book the format that fits — classes, 1-on-1, or recovery.
     </div>
   </div>
 </div>
@@ -1066,12 +1197,19 @@ addUtilities({
 
         document.querySelectorAll("h1, h2, .h-reveal").forEach(el => {
           if (!el.textContent.trim()) return;
-          const words = el.innerText.split(/s+/);
-          el.innerHTML = words.map(w =>
-            `<span style="display:inline-block;overflow:hidden;vertical-align:top;margin-right:0.25em">` +
-            `<span class="reveal-word" style="display:inline-block;transform:translateY(110%)">${w}</span>` +
-            `</span>`
-          ).join("");
+
+          // If the HTML already provides reveal wrappers (or an sr-only label
+          // we need to preserve), don't blow them away — just animate.
+          const alreadyWrapped = el.querySelector(".reveal-wrapper");
+
+          if (!alreadyWrapped) {
+            const words = el.innerText.split(/\s+/).filter(Boolean);
+            el.innerHTML = words.map(w =>
+              `<span class="reveal-wrapper">` +
+              `<span class="reveal-word" style="transform:translateY(110%)">${w}</span>` +
+              `</span>`
+            ).join(" ");
+          }
 
           gsap.to(el.querySelectorAll(".reveal-word"), {
             y: 0,
@@ -1106,19 +1244,21 @@ addUtilities({
 
 
 <!-- Mobile Menu Overlay -->
-<div id="mobileMenu" class="mobile-menu fixed inset-0 z-[100] bg-neutral-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
-  <button onclick="document.getElementById('mobileMenu').classList.remove('active')" class="absolute top-8 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
+<div id="mobileMenu" class="mobile-menu fixed inset-0 z-[100] bg-neutral-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-6">
+  <button aria-label="Close menu" onclick="document.getElementById('mobileMenu').classList.remove('active')" class="absolute top-8 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
     <iconify-icon icon="solar:close-circle-linear" width="1.5em" height="1.5em"></iconify-icon>
   </button>
-  <img src="assets/images/logo-orange.png" alt="Pro3 Fitness" class="h-20 w-auto mb-8">
-  <a href="#" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Classes</a>
-  <a href="#" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Training</a>
-  <a href="#" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Recovery</a>
-  <a href="#" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Nutrition</a>
-  <a href="#" class="mt-4 px-10 py-4 bg-blue-500 rounded-full text-white font-semibold uppercase tracking-widest hover:bg-orange-600 transition-colors">Join Pro3</a>
+  <img src="assets/images/logo-orange.png" alt="Pro3 Fitness" class="h-20 w-auto mb-6">
+  <a href="https://book.squareup.com/classes/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/classes" target="_blank" rel="noopener" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Classes</a>
+  <a href="https://book.squareup.com/appointments/nr3zc23or7tx9h/location/LCVGXH1RAFCNE/services" target="_blank" rel="noopener" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Book Session</a>
+  <a href="members.html" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Programs</a>
+  <a href="#facility" onclick="document.getElementById('mobileMenu').classList.remove('active')" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Facility</a>
+  <a href="#join" onclick="document.getElementById('mobileMenu').classList.remove('active')" class="text-2xl font-oswald font-semibold text-white uppercase tracking-widest hover:text-blue-500 transition-colors">Membership</a>
+  <a href="https://app.waiverelectronic.com/render/templateByRefId/66d8e13ab4d10100ec805d4d" target="_blank" rel="noopener" class="text-sm font-semibold text-white/60 uppercase tracking-widest hover:text-white transition-colors">Sign Waiver</a>
+  <a href="#start" onclick="document.getElementById('mobileMenu').classList.remove('active')" class="mt-4 px-10 py-4 bg-blue-500 rounded-full text-white font-semibold uppercase tracking-widest hover:bg-orange-600 transition-colors">Join Pro3</a>
 </div>
 <script>
-document.querySelector('.md\\:hidden')?.addEventListener('click', () => {
+document.getElementById('mobileMenuOpen')?.addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.add('active');
 });
 </script>
