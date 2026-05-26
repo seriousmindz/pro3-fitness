@@ -1,0 +1,13 @@
+{
+  "name": "pro3-fitness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pro3 Fitness landing site",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/styles/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/styles/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
