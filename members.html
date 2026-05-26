@@ -442,14 +442,37 @@
 
     <!-- Footer -->
     <footer class="text-white bg-black border-white/10 border-t py-16 px-6 md:px-12">
-      <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-4">
-          <picture><source srcset="assets/images/logo-orange.webp" type="image/webp"><img data-opt="1" src="assets/images/logo-orange.png" alt="Pro3 Fitness" width="480" height="468" loading="eager" decoding="async" class="h-10 w-auto"></picture>
-          <span class="text-white/30 text-sm">© 2026 Pro3 Fitness. All rights reserved.</span>
+      <div class="max-w-[1600px] mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <picture><source srcset="assets/images/logo-orange.webp" type="image/webp"><img data-opt="1" src="assets/images/logo-orange.png" alt="Pro3 Fitness" width="480" height="468" loading="eager" decoding="async" class="h-10 w-auto"></picture>
+            <span class="text-white/30 text-sm">© 2026 Pro3 Fitness. All rights reserved.</span>
+          </div>
+          <a href="index.html" class="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-widest font-medium">
+            Back to Home →
+          </a>
         </div>
-        <a href="index.html" class="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-widest font-medium">
-          Back to Home →
-        </a>
+
+        <!-- Network + Credits -->
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-white/50">
+            <span class="text-white/30">Family of Brands</span>
+            <span class="text-white/15">/</span>
+            <a href="https://theparkingguys.com" target="_blank" rel="noopener" class="text-white/80 hover:text-blue-500 transition-colors font-semibold">
+              The Parking Guys
+            </a>
+          </div>
+
+          <a href="https://build.seriousmindz.ai" target="_blank" rel="noopener" class="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-white/50 hover:text-white transition-colors">
+            <span>Designed &amp; Built by</span>
+            <picture>
+              <source srcset="assets/images/seriousmindz-logo.webp" type="image/webp">
+              <img src="assets/images/seriousmindz-logo.png" alt="SeriousMindz AI" width="200" height="133" loading="lazy" decoding="async" class="h-7 w-auto opacity-70 group-hover:opacity-100 transition-opacity">
+            </picture>
+            <span class="font-semibold text-white/80 group-hover:text-blue-500 transition-colors">SeriousMindz AI</span>
+            <iconify-icon icon="solar:arrow-right-up-linear" width="1em" height="1em" class="opacity-50 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"></iconify-icon>
+          </a>
+        </div>
       </div>
     </footer>
 
