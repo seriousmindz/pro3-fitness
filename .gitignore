@@ -2,3 +2,4 @@
 *.rtf
 .agent/
 node_modules/
+.vercel
