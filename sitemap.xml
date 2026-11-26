@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://p3fitness.vercel.app/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image>
+      <image:loc>https://p3fitness.vercel.app/assets/images/hero/dsc_0054-3-enhanced-nr_1.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://p3fitness.vercel.app/members</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+</urlset>
